@@ -1,0 +1,38 @@
+#footer{
+    text-align:center;
+    position: absolute;
+    width:100%;
+    left:0px;
+    bottom:0px;
+    padding:10px;
+    background: black;
+    color: white;
+
+}
+
+#formCriarConta{
+margin-top: 30px;
+}
+
+#container-global{
+padding: 10px;
+margin-top: 5rem;
+}
+
+#containerAdicionarConta{
+padding: 10px;
+margin-top: 5rem;
+}
+#container-users{
+padding: 10px;
+margin-top: 5rem;
+}
+#container-contas{
+padding: 10px;
+margin-top: 5rem;
+}
+
+#containerTransacoes{
+padding: 10px;
+margin-top: 5rem;
+}
