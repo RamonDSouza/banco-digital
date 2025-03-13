@@ -35,11 +35,9 @@ public class UserServiceImpl implements UserService {
         user.setName(userDto.getFirstName() + " " + userDto.getLastName());
         user.setEmail(userDto.getEmail());
 
-        // 🔐 Garante que a senha será criptografada antes de salvar
         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
 
-        // 🔎 Busca a Role no banco (evita erro caso a Role não exista)
-        Role role = roleRepository.findByName("ROLE_ADMIN");
+        Role role = roleRepository.findByName("ROLE_USER");
         user.setRoles(Collections.singletonList(role));
         userRepository.save(user);
     }
@@ -66,10 +64,9 @@ public class UserServiceImpl implements UserService {
         return userDto;
     }
 
-    // 🛠 Método para criar a Role caso ela não exista
     private Role createDefaultRole() {
         Role role = new Role();
-        role.setName("ROLE_ADMIN");
+        role.setName("ROLE_USER");
         return roleRepository.save(role);
     }
 }

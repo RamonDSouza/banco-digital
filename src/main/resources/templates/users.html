@@ -34,28 +34,6 @@
         </tbody>
     </table>
 </div>
-
-    <div class="container" id="container-contas">
-        <div class="row">
-            <h1> Contas Bancárias Registradas</h1>
-        </div>
-        <table class="table table-striped table-bordered table-hover">
-            <thead class="table-dark">
-            <tr>
-                <th>Número da Conta</th>
-                <th>Nome do Titular</th>
-                <th>Saldo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="conta : ${contas}">
-                <td th:text="${conta.id}"></td>
-                <td th:text="${conta.titular}"></td>
-                <td th:text="${#numbers.formatDecimal(conta.saldo, 1, 2)}"></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
 </section>
 </body>
 </html>
